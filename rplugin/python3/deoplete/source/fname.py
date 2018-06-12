@@ -16,5 +16,5 @@ class Source(Base):
         if not exists(context['bufpath']):
             return []
         name = basename(context['bufpath'])
-        return [{'word': name, 'menu': 'fn'}, {'word': sub(r"\..*?$", '', name), 'menu': 'fn'}]
+        return [{'word': sub(r"\..*?$", '', name), 'menu': 'fn'}, {'word': name, 'menu': 'fn'}]
 
